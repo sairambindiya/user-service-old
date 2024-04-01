@@ -1,0 +1,35 @@
+
+s
+java:S1192'"VDefine a constant instead of duplicating this literal "Service start time {}" 4 times.(äìÙø8ÌŠìõè1
+u
+java:S1192&"XDefine a constant instead of duplicating this literal "Current thread name {}," 4 times.(ÓõÔ­8ÌŠìõè1
+v
+java:S11920"TDefine a constant instead of duplicating this literal "Service end time {}" 4 times.(íÜ‘øÿÿÿÿÿ8ÍŠìõè1
+E
+java:S1604!"(Make this anonymous inner class a lambda(ğ‹Ê¾8ÓÙõè1
+E
+java:S16044"(Make this anonymous inner class a lambda(ğ‹Ê¾8ÎŠìõè1
+E
+java:S1604G"(Make this anonymous inner class a lambda(ğ‹Ê¾8ÎŠìõè1
+E
+java:S1604Z"(Make this anonymous inner class a lambda(ğ‹Ê¾8ÎŠìõè1
+l
+java:S2259‰"IA "NullPointerException" could be thrown; "userEntity1" is nullable here.(ïÅíúÿÿÿÿ8¥ÓÙõè1
+j
+java:S2095 "MUse try-with-resources or close this "ExecutorService" in a "finally" clause.(Õµ›Œ8¥ÓÙõè1
+«
+java:S4449ƒ"ŒAnnotate the parameter with @javax.annotation.Nullable in method 'delete' declaration, or make sure that null can not be passed as argument.(È‘Ë‰8¥ÓÙõè1
+t
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 20 to the 15 allowed.(‘…ı—ûÿÿÿÿ8ñ‹ìõè1
+^
+java:S3457&"AFormat specifiers should be used instead of string concatenation.(ÓõÔ­8Å¹Şõè1
+^
+java:S34579"AFormat specifiers should be used instead of string concatenation.(ÓõÔ­8ù‹ìõè1
+^
+java:S3457L"AFormat specifiers should be used instead of string concatenation.(ÓõÔ­8ÿ‹ìõè1
+^
+java:S3457_"AFormat specifiers should be used instead of string concatenation.(ÓõÔ­8ƒŒìõè1
+_
+java:S1128"=Remove this unused import 'com.user.userservice.dto.UserDto'.(æ·„‰úÿÿÿÿ8ÅÂÜõè1
+a
+java:S1128"DRemove this unused import 'java.util.concurrent.ThreadPoolExecutor'.(¦ÿöÊ8ÅÂÜõè1

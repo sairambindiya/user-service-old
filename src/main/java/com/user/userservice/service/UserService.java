@@ -1,14 +1,14 @@
 package com.user.userservice.service;
 
 import com.github.javafaker.Faker;
-import com.user.userservice.dto.UserDto;
 import com.user.userservice.entity.UserEntity;
 import com.user.userservice.repository.UserRepository;
 import org.slf4j.LoggerFactory;
 
 import org.slf4j.Logger;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+
+import java.util.Optional;
 
 
 @Service
@@ -49,22 +49,28 @@ public class UserService {
         return userRepository.count();
     }
 
-    public ResponseEntity<UserEntity> getUser(Long userId) {
-        return userRepository.findByUserId(userId);
+    public Optional<UserEntity> getUser(Long userId) {
+        return Optional.ofNullable(userRepository.findByUserId(userId).orElseThrow());
     }
 
     public String deleteUser(Long userId) {
-        UserEntity userEntity1= getUser(userId).getBody();
-        userRepository.delete(userEntity1);
+        userRepository.deleteById(userId);
         return "User record "+userId +" deleted";
     }
 
-    public UserEntity updateUser(Long userId, UserEntity userEntity) {
-        UserEntity userEntity1= getUser(userId).getBody();
-        userEntity1.setUserId(userEntity.getUserId());
-        userEntity1.setFirstName(userEntity.getFirstName());
-        userEntity1.setLastName(userEntity.getLastName());
-        return userRepository.save(userEntity1);
+    public UserEntity updateUser(Long userId, Optional<UserEntity> userEntity) {
+        Optional<UserEntity> userEntity1= getUser(userId);
+        if(userEntity1.isPresent())
+        {
+            UserEntity extractUserEntity=userEntity1.get();
+            extractUserEntity.setFirstName(userEntity.get().getFirstName());
+            extractUserEntity.setLastName(userEntity.get().getLastName());
+            extractUserEntity.setUserId(userEntity.get().getUserId());
+            return userRepository.save(extractUserEntity);
+        }
+    else{
+     throw new RuntimeException("User Not found");
+        }
 
     }
 }
